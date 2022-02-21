@@ -6,4 +6,5 @@ fun main() {
     val h=Human();
     h.hello();
     var age:Int = 110;
+    age=age+9;
 }

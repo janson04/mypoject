@@ -5,6 +5,7 @@ public class Hello {
         Person p=new Person();
         p.hello();
         byte a = 127;
+        char c='C';
         
     }
 }
