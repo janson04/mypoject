@@ -8,4 +8,5 @@ fun main() {
     h.hello()
     var a=10+5;
     a=15;
+    var b=200;
 }
