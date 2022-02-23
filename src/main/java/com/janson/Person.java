@@ -1,6 +1,9 @@
 package com.janson;
 
-public class Person {
+public class Person extends Object{
+    public Person(float weight,float height){
+        super();
+    }
     String name;
     float weight;
     float height;
