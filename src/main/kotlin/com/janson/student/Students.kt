@@ -2,7 +2,31 @@ package com.janson.kotlin
 
 class Students(var name: String, var english: Int, var math: Int) {
     fun print() {
-        System.out.println(name + "\t" + english + "\t" + math
-                + "\t" + (english+math)/2 );
+        print("$name\t$english$\t$math"
+                + "\nAverage: "+ getAverage() + "\t" + if (getAverage() >= 60) "PASS" else "FAILED")
+        println("\nGrade: " + grading())
+    }
+
+    fun grading() = when (getAverage()){
+        in 90..100 -> 'A'
+        in 80..90 -> 'B'
+        in 70..80 -> 'C'
+        in 60..70 -> 'D'
+        else -> 'F'
+    }
+
+    fun getAverage(): Int {
+        return (english + math) / 2
+    }
+
+    fun highest() : Int {
+        var max = if (english > math) {
+            println("Highest class: English ")
+            english
+        } else {
+            println("Highest class: Math ")
+            math
+        }
+        return max
     }
 }
