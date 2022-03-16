@@ -1,4 +1,4 @@
-package com.janson
+package com.janson.kotlin
 
 class Human (var weight: Float, var height:Float, var name:String = "") {
     init {

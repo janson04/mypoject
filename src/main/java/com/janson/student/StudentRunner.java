@@ -1,13 +1,26 @@
 package com.janson.student;
 
+
+import com.janson.kotlin.Students;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class StudentRunner {
     public static void main(String[] args) {
 //        userInput();
-        Student stu = new Student("Janson", 72 , 20);
+//        Students.Companion.test();
+//        Students.setPass(60);
+
+        Student.pass = 50;
+        Student stu = new Student("Janson", 72 , 80);
+        Student stu2 = new Student("Tom", 66 , 50);
+        Student stu3 = new Student("Jane", 30 , 55);
         stu.print();
+        System.out.println("------");
+        stu2.print();
+        System.out.println("------");
+        stu3.print();
         System.out.println("Highest score: " + stu.highest());
     }
 

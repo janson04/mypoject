@@ -13,7 +13,7 @@ public class Person extends Object{
     float weight;
     float height;
     public float bmi(){
-        float bmi = weight/ (height*height);
+        float bmi = weight/ (height * height);
         return bmi;
     }
     public void hello() {

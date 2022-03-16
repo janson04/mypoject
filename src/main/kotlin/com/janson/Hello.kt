@@ -1,4 +1,4 @@
-package com.janson
+package com.janson.kotlin
 
 fun main() {
 //    println("Hello World")

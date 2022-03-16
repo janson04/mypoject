@@ -1,9 +1,17 @@
 package com.janson.kotlin
 
 class Students(var name: String, var english: Int, var math: Int) {
+    companion object{
+        @JvmStatic
+        var pass = 60
+        fun test(){
+            println("testing")
+        }
+    }
+
     fun print() {
-        print("$name\t$english$\t$math"
-                + "\nAverage: "+ getAverage() + "\t" + if (getAverage() >= 60) "PASS" else "FAILED")
+        print("$name\t$english\t$math"
+                + "\nAverage: "+ getAverage() + "\t" + if (getAverage() >= pass) "PASS" else "FAILED")
         println("\nGrade: " + grading())
     }
 
