@@ -16,10 +16,11 @@ public class StudentRunner {
         Student stu = new Student("Janson", 72 , 80);
         Student stu2 = new Student("Tom", 66 , 50);
         Student stu3 = new Student("Jane", 30 , 55);
+        GraduateStudent gstu = new GraduateStudent("Jack" , 60
+                , 50 , 80);
+        gstu.print();
         stu.print();
-        System.out.println("------");
         stu2.print();
-        System.out.println("------");
         stu3.print();
         System.out.println("Highest score: " + stu.highest());
     }

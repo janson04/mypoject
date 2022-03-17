@@ -25,8 +25,8 @@ public class Student {
 
     public void print() {
         int average = getAverage();
-        System.out.println(name + "\t" + english + "\t" + math
-        + "\t" + getAverage() + "\t" + ((average>=pass)? "PASS" : "FAILED"));
+        System.out.print(name + "\t" + english + "\t" + math
+        + "\t" + "Average:" + average + "\t" + ((average>=pass)? "PASS" : "FAILED") + "\t");
         char grading = 'F';
         switch (average/10) {
             case 10:
@@ -46,8 +46,7 @@ public class Student {
                 grading = 'F';
 
         }
-        System.out.println("Average: " + average);
-        System.out.println("Grade: " + grading);
+        System.out.println("Grade:" + grading);
 /*        if (getAverage()>=60) {
             System.out.println("\tPASS");
         } else {
