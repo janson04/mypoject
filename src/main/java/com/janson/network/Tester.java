@@ -12,16 +12,19 @@ public class Tester {
     public static void main(String[] args) {
         try {
 //            URL url = new URL("http://myjson.dit.upm.es/api/bins/e1zb");
-            URL url = new URL("http://datacenter.taichung.gov.tw/swagger/OpenData/556d6519-3424-4a02-b46c-d6b24352143c");
-//            URL url = new URL("http://atm201605.appspot.com/h");
+//            URL url = new URL("https://tcgbusfs.blob.core.windows.net/blobtcmsv/TCMSV_alldesc.json");
+            URL url = new URL("http://atm201605.appspot.com/h");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream is = connection.getInputStream();
             BufferedReader in = new BufferedReader(new InputStreamReader(is));
             String line = in.readLine();
+            StringBuffer json = new StringBuffer();
             while (line != null) {
-                System.out.println(line);
+//                System.out.println(line);
+                json.append(line);
                 line = in.readLine();
             }
+            System.out.println(json.toString());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
