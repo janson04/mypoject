@@ -29,13 +29,13 @@ public class McDonald {
     }
     public void printMenu() {
         for (Map.Entry<String, Item> itemEntry : menu.entrySet()) {
-            System.out.println(itemEntry.getValue().id);
+            System.out.println(itemEntry.getValue());
         }
     }
 
     public static void main(String[] args) {
-//        McDonald mc = new McDonald();
-        printMenu();
+        McDonald mc = new McDonald();
+        mc.printMenu();
     }
 }
 
@@ -44,6 +44,11 @@ class Item {
     String name;
     int calorie;
     int price;
+
+    @Override
+    public String toString() {
+        return id + "\t" + name + "\t" + calorie + "\t" + price;
+    }
 
     public Item(String id, String name, int calorie, int price) {
         this.id = id;
