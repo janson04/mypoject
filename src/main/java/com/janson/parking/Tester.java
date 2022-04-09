@@ -2,11 +2,40 @@ package com.janson.parking;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
+        //Java8
+        javaTime();
+        //Local
+        localTime();
+//        javadatecalender();
+    }
+
+    private static void localTime() {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        System.out.println(formatter.format(now));
+
+        System.out.println(now.plus(Duration.ofHours(3))); //加3小時
+
+        LocalDateTime otherday = LocalDateTime.of(2022, 11 , 13 , 8, 16, 30);
+        System.out.println(otherday);
+    }
+
+    private static void javaTime() {
+        Instant instant = Instant.now();
+        System.out.println(instant);
+    }
+
+    private static void javadatecalender() {
         Date date = new Date();
         System.out.println(date);
         System.out.println(date.getTime());
