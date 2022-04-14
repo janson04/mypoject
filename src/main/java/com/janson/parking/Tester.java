@@ -5,14 +5,30 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
-        Car car = new Car("AA-0001",System.currentTimeMillis());
-        
+        LocalDateTime enter =
+                LocalDateTime.of(2022,4,15,
+                        8,0,0);
+        LocalDateTime leave =
+                LocalDateTime.of(2022,4,15,
+                        10,8,0);
+
+        //轉換成long，如果不轉換，要把class內寫成物件導向的 LocalDateTime
+//        Car car = new Car("AA-0001",enter.atZone(ZoneId.systemDefault()).toEpochSecond());
+
+        Car car = new Car("AA-0001",enter);
+        car.setLeave(leave);
+        System.out.println(car.getDuration());
+
+        long hour = (long) Math.ceil(car.getDuration() / 60f);
+        System.out.println(hour);
+
         //Java8
 //        javaTime();
 
