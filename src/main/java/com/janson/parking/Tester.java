@@ -11,10 +11,14 @@ import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
+        Car car = new Car("AA-0001",System.currentTimeMillis());
+        
         //Java8
-        javaTime();
+//        javaTime();
+
         //Local
-        localTime();
+//        localTime();
+
 //        javadatecalender();
     }
 
